@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>shopweb</title>
+</head>
+<body>
+    <div class="container">
+        <form action='train6-checkout.php' method='get'>
+            <h2>歡迎來到商店街</h2>
+            <a href="train6-index.php" class="btn btn-info">首頁</a>
+            <h3>商品列表</h3>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th width="40%">產品</th>
+                        <th width="20%">售價</th>
+                        <th width="30%">店家名稱</th>
+                        <th width="10%">購買</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{foreach from=$itemarraylist item=i}}
+                        <tr>
+                            <td>{{$i.items_name}}</td>
+                            <td>{{$i.items_price}}</td>
+                            <td>{{$i.store_name}}</td>
+                            <td>
+                                <button type="submit" class="btn btn-success" name="buy" value="{{$i.items_no}}">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>購買
+                                </button>
+                            </td>
+                        </tr>
+                    {{/foreach}}
+                </tbody>
+            </table>
+
+        </form>
+    </div>
+</body>
+</html>
