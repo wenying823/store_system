@@ -21,15 +21,7 @@
 請跟之前的通訊錄連結,使通訊錄上人員可訂產品
 ![image](https://github.com/wenying823/store_system/blob/master/%E5%95%86%E5%BA%97%E8%A1%97%E7%95%AB%E9%9D%A2.JPG)
 
-table 名稱
-業務人員的 table 名用 sales
-店家 table 名用 store 
-產品品項 table 名用  items
-訂購 table 名用 order
-
-
 DB:
-
 items table
 items_no 商品編號
 items_name 商品名稱
